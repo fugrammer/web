@@ -30,6 +30,10 @@ else:
 
 app = Eve()
 
-
+@app.route('/hello')
+def hello_world():
+    s="THOMAS"
+    return 'hello world!' + s
+    
 if __name__ == '__main__':
     app.run(host=host, port=port)
